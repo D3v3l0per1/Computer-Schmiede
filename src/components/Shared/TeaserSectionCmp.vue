@@ -11,11 +11,7 @@
 
         <!-- Image/Icon -->
 
-        <v-img :src="item.icon" class="teaser-img" style="margin-left: 43%;">
-          <v-layout slot="placeholder" fill-height align-center justify-center ma-0>
-            <v-progress-circular indeterminate color="grey lighten-2"></v-progress-circular>
-          </v-layout>
-        </v-img>
+        <img :src="item.icon" class="teaser-img" alt="">
 
         <!-- Text Content -->
       
@@ -37,11 +33,16 @@ export default {
 </script>
 
 <style scoped>
-.teaser-img {
-  width: 70px;
-}
+.teaser {
+  margin-top: 20px;
+  }
 
-.teaser-headline {
-  font-size: 1.5em;
-}
+  .teaser-img {
+    width: 70px;
+    /* height: 64px; */
+  }
+  
+  .teaser-headline {
+    font-size: 1.5em;
+  }
 </style>

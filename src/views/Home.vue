@@ -5,15 +5,11 @@
 
     <TeaserSectionCmp title="Unsere Leistungen" :items="service_items" />
 
-    <Parallax 
-      text=""
-      image="https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/parallax%2Fhome_bg_2.png?alt=media&token=b211dee8-22cb-4dac-83c2-43080dadf911"
-      btn_text=""
-      btn_link="" />
+    <Parallax image="https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/parallax%2F04.jpg?alt=media&token=81a133ca-a3c3-4de3-9ff8-9c31b34d0a1a" />
 
     <TeaserSectionCmp title="Unsere Produkte" :items="our_products" />
 
-    <Parallax 
+    <ParallaxWithText 
       text="Fragen kost nix"
       image="https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/parallax%2Fhome_bg_2.png?alt=media&token=b211dee8-22cb-4dac-83c2-43080dadf911"
       btn_text="Kontakt"
@@ -25,15 +21,17 @@
 
 <script>
   import VueParticles from '@/components/Shared/Particles'
-  import TeaserSectionCmp from '@/components/Shared/TeaserSectionCmp'
   import Parallax from '@/components/Shared/Parallax'
+  import TeaserSectionCmp from '@/components/Shared/TeaserSectionCmp'
+  import ParallaxWithText from '@/components/Shared/ParallaxWithText'
 
   export default {
     name: 'Home',
     components: {
       VueParticles,
+      Parallax,
       TeaserSectionCmp,
-      Parallax
+      ParallaxWithText
     },
     data () {
       return {
@@ -43,11 +41,31 @@
             title: 'Beratung', 
             text: 'Hier ist der Laie gut aufgehoben und der Profi wird auf Augenhöhe verstanden. Zusammen finden wir die Lösung für Ihre individuellen Bedürfnisse! Ehrlich und Unabhängig!'
           },
-          { icon: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/icons%2Freparatur.jpg?alt=media&token=feeb5fe7-2300-49bd-bcb7-e2886156b66c', title: 'Reparatur', teaserAnim: ' right', text: 'Meistens ist die Reparatur eines defekten Geräts sinnvoller und günstiger, als ein Neukauf. Miteinander gegen das vorzeitige Wegwerfen!' },
-          { icon: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/icons%2Fsonderzeug.jpg?alt=media&token=22aa2860-a906-416b-82fb-47063de83917', title: 'Anfertigungen', teaserAnim: ' right', text: 'Mit der Auswahl an optimal aufeinander abgestimmten, hochwertigen Komponenten bieten wir PC-Sonderfertigungen nach Ihren Vorstellungen an.' },
-          { icon: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/icons%2Fsoftwareberatung.jpg?alt=media&token=eafd5a36-fd46-4bb9-8492-25a7eaf3048a', title: 'Software-Service', teaserAnim: ' left', text: 'Computer wieder flott machen – Windows neu aufsetzen – Software entrümpeln – Festplatte bereinigen – Virenschutz und Datensicherung einrichten – Expressbestellungen – Sonderanfertigungen – Umbauten – Upgrades – und noch viel mehr!' },
-          { icon: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/icons%2Fservice.jpg?alt=media&token=db260170-6e9b-4cee-98bb-32721282a20a', title: 'Abholung und Lieferung', teaserAnim: ' right', text: 'Sie wollen Ihre Produkte geliefert bekommen oder wollen Ihr Gerät zum Service abholen lassen? Das lässt sich unkompliziert organisieren!' },
-          { icon: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/icons%2Fsuchen-1.jpg?alt=media&token=f935e0d2-88fa-4cf2-ae0e-6cf5d32487d3', title: 'Datenrettung', teaserAnim: ' right', text: 'Ihre Daten können bei uns zu über 95 % vollkommen gerettet werden. Wir analysieren Ihre Festplatten, Speicherkarten und USB-Sticks und retten Ihre Daten, wenn möglich selbst. In den schwierigsten Fällen stehen wir in Verbindung mit einem Datenrettungslabor.' }
+          {
+            icon: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/icons%2Freparatur.jpg?alt=media&token=feeb5fe7-2300-49bd-bcb7-e2886156b66c',
+            title: 'Reparatur',
+            text: 'Meistens ist die Reparatur eines defekten Geräts sinnvoller und günstiger, als ein Neukauf. Miteinander gegen das vorzeitige Wegwerfen!'
+          },
+          {
+            icon: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/icons%2Fsonderzeug.jpg?alt=media&token=22aa2860-a906-416b-82fb-47063de83917',
+            title: 'Anfertigungen',
+            text: 'Mit der Auswahl an optimal aufeinander abgestimmten, hochwertigen Komponenten bieten wir PC-Sonderfertigungen nach Ihren Vorstellungen an.'
+          },
+          {
+            icon: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/icons%2Fsoftwareberatung.jpg?alt=media&token=eafd5a36-fd46-4bb9-8492-25a7eaf3048a',
+            title: 'Software-Service',
+            text: 'Computer wieder flott machen – Windows neu aufsetzen – Software entrümpeln – Festplatte bereinigen – Virenschutz und Datensicherung einrichten – Expressbestellungen – Sonderanfertigungen – Umbauten – Upgrades – und noch viel mehr!'
+          },
+          {
+            icon: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/icons%2Fservice.jpg?alt=media&token=db260170-6e9b-4cee-98bb-32721282a20a',
+            title: 'Abholung und Lieferung',
+            text: 'Sie wollen Ihre Produkte geliefert bekommen oder wollen Ihr Gerät zum Service abholen lassen? Das lässt sich unkompliziert organisieren!'
+          },
+          {
+            icon: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/icons%2Fsuchen-1.jpg?alt=media&token=f935e0d2-88fa-4cf2-ae0e-6cf5d32487d3',
+            title: 'Datenrettung',
+            text: 'Ihre Daten können bei uns zu über 95 % vollkommen gerettet werden. Wir analysieren Ihre Festplatten, Speicherkarten und USB-Sticks und retten Ihre Daten, wenn möglich selbst. In den schwierigsten Fällen stehen wir in Verbindung mit einem Datenrettungslabor.'
+          }
         ],
         our_products: [
           { icon: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/icons%2Fbirne.png?alt=media&token=50aae886-7cb5-4604-8fb3-f8194a9da4c8', title: 'Batterien', text: 'Batterien, Netzteile, Ladegeräte, Ersatzakkus Kabel und Adapter für Strom, Bild, Ton, Daten, etc.' },

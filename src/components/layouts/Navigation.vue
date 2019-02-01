@@ -49,6 +49,7 @@
           <v-list-tile-title>{{ item.title }}</v-list-tile-title>
         </v-list-tile>
 
+        <!-- Logout Btn -->
         <v-list-tile v-if="userIsAuthenticated" @click="onLogout">
           <v-list-tile-action>
             <v-icon>exit_to_app</v-icon>
@@ -80,7 +81,7 @@ export default {
     menuItems () {
       let menuItems = [
         { title: 'Home', icon: 'dashboard', link: '/' },
-        { title: 'Über uns', icon: 'supervisor_account', link: '/ueber_uns' },
+        { title: 'Über uns', icon: 'supervisor_account', link: '/about' },
         { title: 'Computerschmiede PC', icon: 'computer', link: '/computerschmiede-pc' },
         { title: '3D Druck', icon: 'print', link: '/3d-druck' },
         { title: 'Kontakt', icon: 'face', link: '/kontakt' },
