@@ -1,26 +1,25 @@
 <template>
-  <div class="about">
-    
-    <ParticlesHeader title="Wilkommen in der Schmiede" />
+  <div class="kontact">
+    <ParticlesHeader title="Treten Sie mit uns in Kontakt" />
 
-    <Parallax parallax_items="parallax_items" />
+    <ContactContent />
 
   </div>
 </template>
 
 <script>
 import ParticlesHeader from '@/components/Shared/ParticlesHeader'
-import Parallax from '@/components/About/Parallax'
+import ContactContent from '@/components/Contact/Content'
 
 export default {
-  name: 'Ueber_uns',
+  name: 'Kontakt',
   metaInfo: {
-    title: 'Über uns',
+    title: 'Kontakt',
     titleTemplate: '%s | Computerschmiede Jenbach'
   },
   components: {
     ParticlesHeader,
-    Parallax
+    ContactContent
   }
 }
 </script>

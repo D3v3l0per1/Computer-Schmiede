@@ -8,7 +8,7 @@
       <v-toolbar-side-icon @click="sidenav = true"></v-toolbar-side-icon>
       
       <!-- Title -->
-      <v-toolbar-title class="hidden-sm-only">
+      <v-toolbar-title class="hidden-sm-and-down">
         <router-link to="/" tag="span" style="cursor: pointer;">
           <img src="@/assets/logo.png" class="pt-2 pb-1" style="height: 60px;" contain alt="">
         </router-link>
@@ -22,6 +22,10 @@
         <v-btn flat v-for="item in menuItems" :key="item.title" :to="item.link">
           <v-icon left>{{ item.icon }}</v-icon>
           {{ item.title }}
+        </v-btn>
+        <v-btn flat v-if="userIsAuthenticated" @click="onLogout">
+          <v-icon left>exit_to_app</v-icon>
+          Abmelden
         </v-btn>
       </v-toolbar-items>
     
@@ -54,7 +58,7 @@
           <v-list-tile-action>
             <v-icon>exit_to_app</v-icon>
           </v-list-tile-action>
-          <v-list-tile-title>Sign Out</v-list-tile-title>
+          <v-list-tile-title>Abmelden</v-list-tile-title>
         </v-list-tile>
       </v-list>
 
@@ -82,20 +86,19 @@ export default {
       let menuItems = [
         { title: 'Home', icon: 'dashboard', link: '/' },
         { title: 'Über uns', icon: 'supervisor_account', link: '/about' },
-        { title: 'Computerschmiede PC', icon: 'computer', link: '/computerschmiede-pc' },
-        { title: '3D Druck', icon: 'print', link: '/3d-druck' },
-        { title: 'Kontakt', icon: 'face', link: '/kontakt' },
+        { title: 'Computerschmiede PC', icon: 'desktop_windows', link: '/computerschmiede-pc' },
+        { title: '3D Druck', icon: 'move_to_inbox', link: '/3d-druck' },
+        { title: 'Kontakt', icon: 'android', link: '/kontakt' },
         // { title: 'Sign In', icon: 'lock_open', link: '/signin' },
         // { title: 'Sign Up', icon: 'face', link: '/signup' }
       ]
       if (this.userIsAuthenticated) {
         menuItems = [
           { title: 'Home', icon: 'dashboard', link: '/' },
-          { title: 'Posts', icon: 'view_list', link: '/posts' },
-          { title: 'Create a Post', icon: 'note_add', link: '/posts/new' },
-          { title: 'About', icon: 'question_answer', link: '/about' },
-          { title: 'Contact', icon: 'person', link: `/contact` },
-          { title: 'Profile', icon: 'face', link: `/profile/${this.user.id}` }
+          { title: 'Über uns', icon: 'supervisor_account', link: '/about' },
+          { title: 'Computerschmiede PC', icon: 'desktop_windows', link: '/computerschmiede-pc' },
+          { title: '3D Druck', icon: 'move_to_inbox', link: '/3d-druck' },
+          { title: 'Kontakt', icon: 'android', link: '/kontakt' },
         ]
       }
       return menuItems

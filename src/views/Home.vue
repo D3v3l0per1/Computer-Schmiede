@@ -5,17 +5,16 @@
 
     <TeaserSectionCmp title="Unsere Leistungen" :items="service_items" />
 
-    <Parallax image="https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/parallax%2F04.jpg?alt=media&token=81a133ca-a3c3-4de3-9ff8-9c31b34d0a1a" />
-
-    <TeaserSectionCmp title="Unsere Produkte" :items="our_products" />
-
     <ParallaxWithText 
       text="Fragen kost nix"
       image="https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/parallax%2Fhome_bg_2.png?alt=media&token=b211dee8-22cb-4dac-83c2-43080dadf911"
       btn_text="Kontakt"
       btn_link="kontakt" />
-      
 
+    <TeaserSectionCmp title="Unsere Produkte" :items="our_products" />
+
+    <Parallax image="https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/home%2FDSC_64311.jpg?alt=media&token=2704946e-cbf9-4af2-a4bf-31cb5ed7c3da " />
+      
   </main>
 </template>
 
@@ -27,6 +26,10 @@
 
   export default {
     name: 'Home',
+    metaInfo: {
+      title: 'Home',
+      titleTemplate: '%s | Computerschmiede Jenbach'
+    },
     components: {
       VueParticles,
       Parallax,

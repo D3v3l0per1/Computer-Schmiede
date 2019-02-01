@@ -1,21 +1,21 @@
 <template>
-  <div class="about">
+  <div class="cspc">
     
-    <ParticlesHeader title="Wilkommen in der Schmiede" />
+    <ParticlesHeader title="Der Schmiede PC" />
 
-    <Parallax parallax_items="parallax_items" />
+    <Parallax />
 
   </div>
 </template>
 
 <script>
 import ParticlesHeader from '@/components/Shared/ParticlesHeader'
-import Parallax from '@/components/About/Parallax'
+import Parallax from '@/components/CSPC/Parallax'
 
 export default {
-  name: 'Ueber_uns',
+  name: 'CSPC',
   metaInfo: {
-    title: 'Über uns',
+    title: 'Computerschmiede PC',
     titleTemplate: '%s | Computerschmiede Jenbach'
   },
   components: {
