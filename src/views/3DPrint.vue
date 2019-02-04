@@ -9,13 +9,14 @@
         <v-flex xs12>
           <v-responsive>
 
-            <h3 class="display-3">Wilkommen auf der 3D Druck Seite</h3>
+            <h3 class="display-3">3D Druck</h3>
 
-            <span class="subheading">Sie haben die Möglichkeit hier Ihre 3D Datei hochzuladen, die Sie ausdrucken wollen und wir senen Ihnen einen Kostenvoranschlag und ob es möglich ist Sie zu drucken :)</span>
+            <span class="subheading">Wir fertigen für Sie kleinere 3D Drucke an. Übermitteln Sie einfach Ihr Modell und wir setzen uns mit Ihnen in Verbindung.</span>
 
             <v-divider class="my-3"></v-divider>
 
             <v-flex xs12 sm8 offset-sm2 text-xs-center class="mt-4 mb-5">
+              <SignUpForPrint />
               <!-- <v-btn dark class="blue lighten-2" large block>Uploaden</v-btn> -->
             </v-flex>
 
@@ -46,6 +47,7 @@
 <script>
 import ParticlesHeader from '@/components/Shared/ParticlesHeader'
 import Prints from '@/components/3DPrint/3DPrints'
+import SignUpForPrint from '@/components/3DPrint/SignUpForPrint'
 
 export default {
   name: 'ThreeDPrint',
@@ -55,7 +57,8 @@ export default {
   },
   components: {
     ParticlesHeader,
-    Prints
+    Prints,
+    SignUpForPrint
   },
   computed: {
     prints () {

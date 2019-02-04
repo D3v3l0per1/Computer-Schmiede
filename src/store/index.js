@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 
 import prints from './prints/index'
+import jobs from './jobs/index'
 import user from './user/index'
 import shared from './shared/index'
 
@@ -11,6 +12,7 @@ export default new Vuex.Store({
   modules: {
     user: user,
     prints: prints,
+    jobs: jobs,
     shared: shared
   }
 })

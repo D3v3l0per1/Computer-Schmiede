@@ -25,30 +25,37 @@ export default {
       blocks: [
         {
           title: 'CPU (Prozessor)',
-          content: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, velit illo quos nulla, quod laudantium voluptates in consequuntur architecto deleniti ',
+          content: 'Hierbei handelt es sich um das Herzstück eines jeden Computers. Wir achten bei der Auswahl auf hohe Leistung für Ihre eingesetzen Programme und Zukunftssicherheit.',
           class: 'offset-sm6',
           imageUrl: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/cspc%2Fcpu.png?alt=media&token=3ae4498b-9ccf-4b11-9c1b-72c5477f4955', 
           background: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/cspc%2FIMG_20181130_1121381.jpg?alt=media&token=062c984a-8138-4cba-8c3d-c06d0a47fe69'
         },
         {
           title: 'Mainboard',
-          content: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, velit illo quos nulla, quod laudantium voluptates in consequuntur architecto deleniti ',
+          content: 'Das Mainboard stellt die Kommunikation zwischen den Komponenten sicher und stellt die Basis für jeden PC dar. Wir wählen Boards mit hoher Zuverlässigkeit und guter Aufrüstbarkeit.',
           class: '',
           imageUrl: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/cspc%2Fmainboard.png?alt=media&token=1fc08363-5994-4f47-a3c8-f5f9cd7bf61f',
           background: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/cspc%2FIMG_20181127_1316142.jpg?alt=media&token=13c16321-3ab0-4db0-a378-8e27d73c4c67'
         },
         {
           title: 'Gehäuse',
-          content: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, velit illo quos nulla, quod laudantium voluptates in consequuntur architecto ',
+          content: 'Gute Kühlung der Komponenten spielt eine wichtige Rolle für deren Lebensdauer. Unsere Kunden haben zudem eine große Auswahl an individuellen Designs.',
           class: 'offset-sm6',
           imageUrl: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/cspc%2Fcase.png?alt=media&token=600412d0-d398-40c2-be9b-3be6581f78ed',
           background: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/cspc%2FIMG_20180706_2308384.jpg?alt=media&token=0d30a01d-4484-4d9e-a401-359241b4fc70'
         },
         {
-          title: 'RAM (ArbeitsspeicherM)',
-          content: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, velit illo quos nulla, quod laudantium voluptates in consequuntur architecto ',
+          title: 'RAM (Arbeitsspeicher)',
+          content: 'Der RAM muss groß genug gewählt werden, um Sie beim Arbeiten oder Spielen nicht auszubremsen.',
           imageUrl: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/cspc%2Fram.png?alt=media&token=11709ed7-3bb2-4ea2-a412-7e83a5136cbb',
           background: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/cspc%2FDSC_6629%20(2).JPG?alt=media&token=ef26780c-b1e8-4d04-8a95-f4455b2e8929'
+        },
+        {
+          title: 'Grafikkarte',
+          content: 'Um Ihre Spiele oder 3D/Videoanwendungen optimal zu beschleunigen haben wir die richtige Grafikkarte für Ihren PC',
+          class: 'offset-sm6',
+          imageUrl: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/cspc%2Fgraka.png?alt=media&token=4bf34f5c-912d-4785-8f50-dce73af20bd9',
+          background: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/cspc%2Fgrakaa.png?alt=media&token=01a8e55b-31f0-4f83-b013-ec35bae2660f'
         }
       ]
     }

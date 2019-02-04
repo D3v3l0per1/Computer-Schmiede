@@ -1,4 +1,4 @@
-<template>
+git d<template>
   <v-layout row wrap>
     <v-flex xs12>
       <v-parallax v-for="item in parallax_items" :key="item.title" :src="item.background">

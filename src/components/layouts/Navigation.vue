@@ -46,6 +46,15 @@
 
       <!-- Items -->
       <v-list>
+
+         <!-- Logout Btn -->
+          <v-list-tile v-if="userIsAuthenticated" router to="/admin">
+            <v-list-tile-action>
+              <v-icon>view_list</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Dashboard</v-list-tile-title>
+          </v-list-tile>
+
         <v-list-tile v-for="item in menuItems" :key="item.title" router :to="item.link">
           <v-list-tile-action>
             <v-icon>{{ item.icon }}</v-icon>

@@ -42,5 +42,6 @@ new Vue({
       }
     })
     this.$store.dispatch('loadPrints')
+    this.$store.dispatch('loadJobs')
   }
 }).$mount('#app')
