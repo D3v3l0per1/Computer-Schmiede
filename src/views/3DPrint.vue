@@ -1,47 +1,49 @@
 <template>
-  <div class="3dprint">
-    
-    <ParticlesHeader title="3D Druck" />
-
-    <v-container>
+  <transition name="AnimateRoute" enter-active-class="animated fadeIn">
+    <div class="3dprint">
       
-      <v-layout row wrap>
-        <v-flex xs12>
-          <v-responsive>
+      <ParticlesHeader title="3D Druck" />
 
-            <h3 class="display-3">3D Druck</h3>
+      <v-container>
+        
+        <v-layout row wrap>
+          <v-flex xs12>
+            <v-responsive>
 
-            <span class="subheading">Wir fertigen für Sie kleinere 3D Drucke an. Übermitteln Sie einfach Ihr Modell und wir setzen uns mit Ihnen in Verbindung.</span>
+              <h3 class="display-3">3D Druck</h3>
 
-            <v-divider class="my-3"></v-divider>
+              <span class="subheading">Wir fertigen für Sie kleinere 3D Drucke an. Übermitteln Sie einfach Ihr Modell und wir setzen uns mit Ihnen in Verbindung.</span>
 
-            <v-flex xs12 sm8 offset-sm2 text-xs-center class="mt-4 mb-5">
-              <SignUpForPrint />
-              <!-- <v-btn dark class="blue lighten-2" large block>Uploaden</v-btn> -->
-            </v-flex>
+              <v-divider class="my-3"></v-divider>
 
-          </v-responsive>
-        </v-flex>
+              <v-flex xs12 sm8 offset-sm2 text-xs-center class="mt-4 mb-5">
+                <SignUpForPrint />
+                <!-- <v-btn dark class="blue lighten-2" large block>Uploaden</v-btn> -->
+              </v-flex>
 
-        <v-flex xs12>
-          <Heading title="Beispiele" />
-        </v-flex>
+            </v-responsive>
+          </v-flex>
 
-        <v-flex xs12 text-xs-center v-if="loading">
-          <v-progress-circular indeterminate class="primary--text" style="margin: 20% 0;"></v-progress-circular>
-        </v-flex>
+          <v-flex xs12>
+            <Heading title="Beispiele" />
+          </v-flex>
 
-        <v-flex xs12 text-xs-right v-if="userIsAuthentificated">
-          <v-btn large class="primary" to="3d-druck/neu">Neues Beispiel</v-btn>
-        </v-flex>
+          <v-flex xs12 text-xs-center v-if="loading">
+            <v-progress-circular indeterminate class="primary--text" style="margin: 20% 0;"></v-progress-circular>
+          </v-flex>
 
-        <Prints v-if="!loading" :prints="prints" />
+          <v-flex xs12 text-xs-right v-if="userIsAuthentificated">
+            <v-btn large class="primary" to="3d-druck/neu">Neues Beispiel</v-btn>
+          </v-flex>
 
-      </v-layout>
+          <Prints v-if="!loading" :prints="prints" />
 
-    </v-container>
+        </v-layout>
 
-  </div>
+      </v-container>
+
+    </div>
+  </transition>
 </template>
 
 <script>

@@ -1,10 +1,13 @@
 <template>
-  <div class="kontact">
-    <ParticlesHeader title="Treten Sie mit uns in Kontakt" />
+  <transition name="AnimateRoute" enter-active-class="animated fadeIn">
+    <div class="kontact">
+ 
+      <ParticlesHeader title="Treten Sie mit uns in Kontakt" />
 
-    <ContactContent />
+      <ContactContent />
 
-  </div>
+    </div>
+  </transition>
 </template>
 
 <script>

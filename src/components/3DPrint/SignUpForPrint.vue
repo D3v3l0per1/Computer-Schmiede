@@ -33,6 +33,9 @@
                 <v-slider v-model="print_quality" :tick-labels="ticksLabelsQualities" :max="2" step="1" ticks="always" tick-size="2"></v-slider>
               </v-flex>
               <v-flex xs12 class="pr-3 pl-3">
+                <v-textarea  name="description" id="description" v-model="description" label="Anmerkungen"></v-textarea>
+              </v-flex>
+              <v-flex xs12 class="pr-3 pl-3">
                 <v-btn color="accent" @click="onPickFile">Datei hochladen</v-btn>
                 <input type="file" style="display: none;" ref="fileInput" accept="*" @change="onFilePicked">
               </v-flex>
@@ -76,6 +79,7 @@ export default {
       color: '',
       custom_color: '',
       print_quality: '',
+      description: '',
       file: null
     }
   },
@@ -95,11 +99,13 @@ export default {
         color: this.color,
         custom_color: this.custom_color,
         print_quality: this.print_quality,
+        description: this.description,
         file: this.file,
         date: new Date()
       }
       console.log(applyPrint)
       this.$store.dispatch('createJob', applyPrint)
+      this.$router.push('/')
       // this.signUpDialog = false
     },
     onPickFile () {

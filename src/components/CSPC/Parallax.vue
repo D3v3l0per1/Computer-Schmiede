@@ -6,7 +6,7 @@
           <v-layout row wrap justify-start>
             <v-flex xs12 sm8 md4 :class="item.class + ' pa-3 custom-parallax-container'" style="margin-top: 8%;" text-xs-center>
               <div>
-                <img :src="item.imageUrl" style="height: 200px;" class="mt-3 mb-3" alt="">
+                <img :src="item.imageUrl" style="width: 100%; max-width: 300px;" class="mt-3 mb-3" alt="">
                 <h3 class="font-weight-regular grey--text text--lighten-1 mb-2">{{ item.title }}</h3>
                 <p class="subheading">{{ item.content }}</p>
               </div>

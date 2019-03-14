@@ -43,5 +43,16 @@ new Vue({
     })
     this.$store.dispatch('loadPrints')
     this.$store.dispatch('loadJobs')
+    this.$store.dispatch('loadPcJobs')
+    // const messaging = firebase.messaging()
+    // messaging.usePublicVapidKey('BBtvozxMSnCE6HAMONnpahTOgdd3O8J_wnVgPuH7vBb-jhBQio_WUFwUKT3c6Wsgd41EFb0w4g5vj2l78f2jOOk')
+    // messaging.requestPermission()
+    //   .then(() => {
+    //     console.log('Notification permisson granted.')
+    //     // TOODO(dev): 
+    //   })
+    //   .catch((err) => {
+    //     console.log('Unable to get perms to notify', err)
+    //   })
   }
 }).$mount('#app')

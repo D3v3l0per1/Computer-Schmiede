@@ -1,9 +1,9 @@
 <template>
   <v-app>
     <Navigation />
-
-    <router-view class="mt-5"></router-view>
-
+  
+      <router-view class="mt-5"></router-view>
+  
     <Footer />
   </v-app>
 </template>
@@ -25,3 +25,7 @@ export default {
   }
 }
 </script>
+
+<style>
+  @import "https://cdn.jsdelivr.net/npm/animate.css@3.5.1";
+</style>

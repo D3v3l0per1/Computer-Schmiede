@@ -1,4 +1,4 @@
-import * as firebase from 'firebase'
+import firebase from 'firebase'
 
 export default {
   state: {
@@ -52,7 +52,6 @@ export default {
                 creatorId: obj[key].creatorId
               })
             }
-            console.log(prints)
             commit('setLoading', false)
             commit('setLoadedPrints', prints)
           }

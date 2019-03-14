@@ -57,6 +57,32 @@ export default new Router({
       component: loadView('ViewPrint')
     },
     {
+      path: '/jobs/',
+      name: 'AllJobs',
+      beforeEnter: AuthGuard,
+      component: loadView('AllJobs')
+    },
+    {
+      path: '/jobs/:id',
+      name: 'ViewJob',
+      props: true,
+      beforeEnter: AuthGuard,
+      component: loadView('ViewJob')
+    },
+    {
+      path: '/pc-jobs/',
+      name: 'AllJobs',
+      beforeEnter: AuthGuard,
+      component: loadView('AllPcJobs')
+    },
+    {
+      path: '/pc-jobs/:id',
+      name: 'ViewJob',
+      props: true,
+      beforeEnter: AuthGuard,
+      component: loadView('ViewPcJob')
+    },
+    {
       path: '/kontakt',
       name: 'Kontakt',
       component: loadView('Kontakt')

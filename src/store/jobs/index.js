@@ -39,6 +39,7 @@ export default {
               fileUrl: obj[key].fileUrl,
               custom_color: obj[key].custom_color,
               print_quality: obj[key].print_quality,
+              description: obj[key].description,
               date: obj[key].date
             })
           }
@@ -58,8 +59,11 @@ export default {
         color: payload.color,
         date: payload.date.toISOString(),
         custom_color: payload.custom_color,
-        print_quality: payload.print_quality
+        print_quality: payload.print_quality,
+        description: payload.description
       }
+      const https = require('https')
+      const url = `https://pushfleet.com/api/v1/send?appid=A6JG9K63&userid=UL2RS765&message=${payload.email}&url=computerschmiede-jenbach.at`
       let fileUrl
       let key
       firebase.database().ref('jobs').push(job)
@@ -79,6 +83,19 @@ export default {
           return firebase.database().ref('jobs').child(key).update({fileUrl: url})
         })
         .then(
+          https.get(url, res => {
+            res.setEncoding('utf8')
+            let body = ''
+            res.on('data', data => {
+              body += data
+            })
+            res.on('end', () => {
+              body = JSON.parse(body)
+              console.log(body)
+            })
+          })
+        )
+        .then(
           commit('createJob', {
             ...job,
             fileUrl: fileUrl,
@@ -97,6 +114,13 @@ export default {
       return state.loadedJobs.sort((jobA, jobB) => {
         return jobA.date < jobB.date
       })
+    },
+    loadedJob (state) {
+      return (jobId) => {
+        return state.loadedJobs.find((job) => {
+          return job.id === jobId
+        })
+      }
     }
   }
 }

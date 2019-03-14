@@ -1,11 +1,13 @@
 <template>
-  <div class="about">
+  <transition name="AnimateRoute" enter-active-class="animated fadeIn">
     
-    <ParticlesHeader title="Wilkommen in der Schmiede" />
+    <div class="about">
+      <ParticlesHeader title="Wilkommen in der Schmiede" />
 
-    <Parallax parallax_items="parallax_items" />
+      <Parallax parallax_items="parallax_items" />
+    </div>
 
-  </div>
+  </transition>
 </template>
 
 <script>
