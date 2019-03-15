@@ -52,8 +52,9 @@
 
               <v-flex xs12>
                 <v-radio-group v-model="pcOrLaptop" :mandatory="false">
-                  <v-radio label="Stand PC" value="pc"></v-radio>
-                  <v-radio label="Laptop"  value="laptop"></v-radio>
+                  <v-radio label="PC" value="Pc"></v-radio>
+                  <span class="ml-2 mb-2 grey--text text--darken-1">oder</span>
+                  <v-radio label="Laptop"  value="Laptop"></v-radio>
                 </v-radio-group>
               </v-flex>
 
@@ -117,7 +118,7 @@ export default {
       return this.email !== '' && this.phone !== '' 
     },
     buyLaptop () {
-      return this.pcOrLaptop === 'laptop'
+      return this.pcOrLaptop === 'Laptop'
     }
   },
   methods: {
@@ -135,6 +136,8 @@ export default {
         storage: this.sliders[4].slider,
         budget: this.sliders[5].slider,
         description: this.description,
+        pcOrLaptop: this.pcOrLaptop,
+        inches: this.inches,
         date: new Date()
       }  
       // console.log(jobObj)

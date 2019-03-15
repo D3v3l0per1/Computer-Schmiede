@@ -12,15 +12,22 @@
           <v-divider class="primary"></v-divider>
           <v-card-text>
             <div>
-              <p class="subheading mb-0">
+              <h2>Kontaktdaten</h2>
+              <v-divider class="mb-2"></v-divider>
+              <p class="mb-0">
                 <span class="font-weight-bold">Angefragt am: </span>{{ job.date | date }} <br>
                 <span class="font-weight-bold">E-Mail: </span><a :href="'mailto:'+ job.email">{{ job.email }}</a> <br>
                 <span class="font-weight-bold">Tel.: </span>{{ job.phone }} <br>
+              </p>
+              <h2 class="mt-3">Details</h2>
+              <v-divider class="mb-2"></v-divider>
+              <p class="mb-2">
                 <span class="font-weight-bold">Farbe: </span>{{ job.color }} <br>
                 <span class="font-weight-bold">Qualität: </span>{{ job.print_quality }} <br>
-                <span class="font-weight-bold">Anmerkungen: </span>
               </p>
-              <p>
+              <h2>Anmerkungen</h2>
+              <v-divider class="mb-2"></v-divider>
+              <p class="ml-3" style="white-space: pre-line;">
                 {{ job.description }}
               </p>
             </div>
@@ -40,6 +47,10 @@
 export default {
   name: 'ViewJob',
   props: ['id'],
+  metaInfo: {
+    title: '3D Druck Auftrag',
+    titleTemplate: '%s | Computerschmiede Jenbach'
+  },
   computed: {
     job () {
       return this.$store.getters.loadedJob(this.id)

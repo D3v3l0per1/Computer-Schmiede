@@ -37,7 +37,10 @@ export default {
               video: obj[key].video,
               storage: obj[key].storage,
               budget: obj[key].budget,
-              description: obj[key].description
+              pcOrLaptop: obj[key].pcOrLaptop,
+              inches: obj[key].inches,
+              description: obj[key].description,
+              date: obj[key].date
             })
           }
           commit('setLoading', false)
@@ -60,6 +63,8 @@ export default {
         storage: payload.storage,
         budget: payload.budget,
         description: payload.description,
+        pcOrLaptop: payload.pcOrLaptop,
+        inches: payload.inches,
         date: payload.date.toISOString()
       }
       // const https = require('https')
